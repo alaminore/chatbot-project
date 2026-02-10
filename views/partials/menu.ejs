@@ -1,0 +1,37 @@
+<section id="menu" class="section menu">
+    <div class="container">
+        <h2>Our Menu</h2>
+        <p class="menu-note">*Availability may vary. Ask our AI assistant for current stock!</p>
+        
+        <div class="menu-categories">
+            <div class="category">
+                <h3>☕ Coffee</h3>
+                <div class="menu-grid">
+                    <% products.filter(p => p.category === 'Coffee').forEach(product => { %>
+                        <div class="menu-item <%= product.inStock ? '' : 'out-of-stock' %>">
+                            <div class="item-name"><%= product.name %></div>
+                            <div class="item-description"><%= product.description %></div>
+                            <div class="item-price">$<%= product.price.toFixed(2) %></div>
+                            <% if (!product.inStock) { %>
+                                <span class="stock-badge">Currently Unavailable</span>
+                            <% } %>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>🥐 Pastries</h3>
+                <div class="menu-grid">
+                    <% products.filter(p => p.category === 'Pastry').forEach(product => { %>
+                        <div class="menu-item">
+                            <div class="item-name"><%= product.name %></div>
+                            <div class="item-description"><%= product.description %></div>
+                            <div class="item-price">$<%= product.price.toFixed(2) %></div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

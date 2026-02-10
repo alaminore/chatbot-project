@@ -1,0 +1,42 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+      url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  costPrice   Float    // SENSITIVE - profit margins
+  inStock     Boolean
+  category    String
+}
+
+model StoreHours {
+  id        Int    @id @default(autoincrement())
+  dayOfWeek String
+  openTime  String
+  closeTime String
+}
+
+model Employee {
+  id           Int     @id @default(autoincrement())
+  name         String
+  email        String  // SENSITIVE - PII
+  salary       Float   // SENSITIVE - confidential
+  phoneNumber  String  // SENSITIVE - PII
+  position     String
+}
+
+model Customer {
+  id           Int     @id @default(autoincrement())
+  name         String  // SENSITIVE - PII
+  email        String  // SENSITIVE - PII
+  phoneNumber  String  // SENSITIVE - PII
+  totalSpent   Float
+}

@@ -1,0 +1,16 @@
+<section id="hours" class="section hours">
+    <div class="container">
+        <h2>Store Hours</h2>
+        <div class="hours-content">
+            <img src="/images/hours-clock.jpg" alt="Store hours" class="section-image">
+            <div class="hours-list">
+                <% hours.forEach(day => { %>
+                    <div class="hours-item">
+                        <span class="day"><%= day.dayOfWeek %></span>
+                        <span class="time"><%= day.openTime %> - <%= day.closeTime %></span>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</section>
