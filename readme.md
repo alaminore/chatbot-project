@@ -78,30 +78,25 @@ This architecture can be adapted for:
 
 ## 📸 Screenshots
 
-<figure>
-  <img src="docs/screenshot2.png" alt="Chatbot Demo: Unrelated Topics">
-  <figcaption>AI chatbot refusing to talk about unrelated topics.</figcaption>
-</figure>
+| ![Chatbot Demo: Prompt Injection](docs/screenshot2.png) |
+|:--:|
+| *AI chatbot refusing to talk about unrelated topics.* |
 
-<figure>
-  <img src="docs/screenshot3.png" alt="Chatbot Demo: Employees">
-  <figcaption>AI chatbot refusing to provide employee information.</figcaption>
-</figure>
+| ![Chatbot Demo: Prompt Injection](docs/screenshot3.png) |
+|:--:|
+| *AI chatbot refusing to provide employee information.* |
 
-<figure>
-  <img src="docs/screenshot4.png" alt="Chatbot Demo: Profit Margins">
-  <figcaption>AI chatbot refusing to provide confidential information about prices.</figcaption>
-</figure>
+| ![Chatbot Demo: Prompt Injection](docs/screenshot4.png) |
+|:--:|
+| *AI chatbot refusing to provide confidential information about prices.* |
 
-<figure>
-  <img src="docs/screenshot5.png" alt="Chatbot Demo: SQL Injection">
-  <figcaption>AI chatbot invulnerable to SQL injection attacks.</figcaption>
-</figure>
+| ![Chatbot Demo: SQL Injection](docs/screenshot5.png) |
+|:--:|
+| *AI chatbot invulnerable to SQL injection* |
 
-<figure>
-  <img src="docs/screenshot6.png" alt="Chatbot Demo: Prompt Injection">
-  <figcaption>AI chatbot invulnerable to prompt injection.</figcaption>
-</figure>
+| ![Chatbot Demo: Prompt Injection](docs/screenshot6.png) |
+|:--:|
+| *AI chatbot invulnerable to prompt injection* |
 
 ## 🔮 Future Enhancements
 
