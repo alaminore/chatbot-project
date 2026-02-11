@@ -421,6 +421,21 @@ body {
   display: none;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--cream);
+  transition: 0.3s;
+}
+
 /* Footer */
 footer {
   background: var(--brown-dark);
@@ -431,13 +446,35 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding: 3rem 1rem;
+    background-attachment: scroll; /* Fixed backgrounds lag on mobile */
+  }
+
+
   .hero-content h1 {
     font-size: 2rem;
   }
   
   .nav-links {
-    gap: 1rem;
-    font-size: 0.9rem;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 200px;
+    background: var(--brown-dark);
+    flex-direction: column;
+    padding: 2rem;
+    transition: right 0.3s;
+    box-shadow: -2px 0 10px var(--shadow);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .hamburger {
+    display: flex;
   }
   
   .chat-widget {

@@ -3,6 +3,22 @@ const chatWidget = document.getElementById('chatWidget');
 const chatToggle = document.getElementById('chatToggle');
 const minimizeBtn = document.getElementById('minimizeBtn');
 
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+
 chatToggle.addEventListener('click', () => {
   chatWidget.classList.add('open');
   chatToggle.classList.add('hidden');
