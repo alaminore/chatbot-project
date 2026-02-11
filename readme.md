@@ -2,7 +2,7 @@
 
 A production-ready AI-powered chatbot for coffee shop customer service, featuring database integration, input sanitization, and multilingual support.
 
-![Demo Screenshot](screenshot.jpg)
+![Demo Screenshot](docs/screenshot.jpg)
 
 ## 🚀 Features
 
@@ -79,27 +79,27 @@ This architecture can be adapted for:
 ## 📸 Screenshots
 
 <figure>
-  <img src="screenshot2.png" alt="Chatbot Demo: Unrelated Topics">
+  <img src="docs/screenshot2.png" alt="Chatbot Demo: Unrelated Topics">
   <figcaption>AI chatbot refusing to talk about unrelated topics.</figcaption>
 </figure>
 
 <figure>
-  <img src="screenshot3.png" alt="Chatbot Demo: Employees">
+  <img src="docs/screenshot3.png" alt="Chatbot Demo: Employees">
   <figcaption>AI chatbot refusing to provide employee information.</figcaption>
 </figure>
 
 <figure>
-  <img src="screenshot4.png" alt="Chatbot Demo: Profit Margins">
+  <img src="docs/screenshot4.png" alt="Chatbot Demo: Profit Margins">
   <figcaption>AI chatbot refusing to provide confidential information about prices.</figcaption>
 </figure>
 
 <figure>
-  <img src="screenshot5.png" alt="Chatbot Demo: SQL Injection">
+  <img src="docs/screenshot5.png" alt="Chatbot Demo: SQL Injection">
   <figcaption>AI chatbot invulnerable to SQL injection attacks.</figcaption>
 </figure>
 
 <figure>
-  <img src="screenshot6.png" alt="Chatbot Demo: Prompt Injection">
+  <img src="docs/screenshot6.png" alt="Chatbot Demo: Prompt Injection">
   <figcaption>AI chatbot invulnerable to prompt injection.</figcaption>
 </figure>
 
@@ -113,9 +113,9 @@ This architecture can be adapted for:
 
 ## 👨‍💻 Author
 
-Built by [Your Name] as a portfolio project demonstrating AI integration, database architecture, and security best practices.
+Built by Erica Dormuth as a portfolio project demonstrating AI integration, database architecture, and security best practices.
 
-[LinkedIn](your-linkedin) | [Portfolio](your-site) | [GitHub](your-github)
+[LinkedIn]https://www.linkedin.com/in/erica-dormuth/ | [GitHub]https://github.com/alaminore
 
 ## 📄 License
 
