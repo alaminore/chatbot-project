@@ -78,23 +78,23 @@ This architecture can be adapted for:
 
 ## 📸 Screenshots
 
-| ![Chatbot Demo: Prompt Injection](docs/screenshot2.png) |
+| ![Chatbot Demo: Prompt Injection](docs/screenshot2.jpg) |
 |:--:|
 | *AI chatbot refusing to talk about unrelated topics.* |
 
-| ![Chatbot Demo: Prompt Injection](docs/screenshot3.png) |
+| ![Chatbot Demo: Prompt Injection](docs/screenshot3.jpg) |
 |:--:|
 | *AI chatbot refusing to provide employee information.* |
 
-| ![Chatbot Demo: Prompt Injection](docs/screenshot4.png) |
+| ![Chatbot Demo: Prompt Injection](docs/screenshot4.jpg) |
 |:--:|
 | *AI chatbot refusing to provide confidential information about prices.* |
 
-| ![Chatbot Demo: SQL Injection](docs/screenshot5.png) |
+| ![Chatbot Demo: SQL Injection](docs/screenshot5.jpg) |
 |:--:|
 | *AI chatbot invulnerable to SQL injection* |
 
-| ![Chatbot Demo: Prompt Injection](docs/screenshot6.png) |
+| ![Chatbot Demo: Prompt Injection](docs/screenshot6.jpg) |
 |:--:|
 | *AI chatbot invulnerable to prompt injection* |
 
