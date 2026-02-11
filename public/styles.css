@@ -447,7 +447,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
-    min-height: 60vh;
+    min-height: 80vh;
     padding: 3rem 1rem;
     background-attachment: scroll; /* Fixed backgrounds lag on mobile */
   }
