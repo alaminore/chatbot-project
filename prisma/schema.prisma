@@ -13,6 +13,19 @@ enum OrderStatus {
   CANCELLED
 }
 
+enum UserRole {
+  ADMIN
+  VIEWER
+}
+
+model Admin {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  passwordHash String
+  role         UserRole @default(VIEWER)
+  createdAt    DateTime @default(now())
+}
+
 model Product {
   id          Int         @id @default(autoincrement())
   name        String      @unique
