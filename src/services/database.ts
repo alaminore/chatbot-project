@@ -8,7 +8,7 @@ export async function getSafeProducts() {
             name: true,
             description: true,
             price: true,
-            inStock: true,
+            stockLevel: true,  
             category: true
         }
     })
@@ -16,4 +16,8 @@ export async function getSafeProducts() {
 
 export async function getStoreHours() {
     return await prisma.storeHours.findMany();
+}
+
+export async function getStoreInfo() {
+  return await prisma.storeInfo.findMany();
 }

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { sanitizeInput, validateInput } from "../helpers/sanitize";
-import { getSafeProducts, getStoreHours } from "../services/database";
+import { getSafeProducts, getStoreHours, getStoreInfo } from "../services/database";
 import { getChatResponse } from "../services/ai";
 
 export async function handleChat (req: Request, res: Response) {
@@ -16,8 +16,9 @@ export async function handleChat (req: Request, res: Response) {
 
         const products = await getSafeProducts();
         const hours = await getStoreHours();
+        const storeInfo = await getStoreInfo();
 
-        const aiResponse = await getChatResponse(sanitizedMessage, products, hours);
+        const aiResponse = await getChatResponse(sanitizedMessage, products, hours, storeInfo);
 
         res.json({reply: aiResponse});
 

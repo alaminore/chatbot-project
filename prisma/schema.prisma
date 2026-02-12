@@ -1,20 +1,29 @@
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-      url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OrderStatus {
+  COMPLETED
+  PENDING
+  CANCELLED
 }
 
 model Product {
-  id          Int      @id @default(autoincrement())
-  name        String
+  id          Int         @id @default(autoincrement())
+  name        String      @unique
   description String
   price       Float
-  costPrice   Float    // SENSITIVE - profit margins
-  inStock     Boolean
+  costPrice   Float       // SENSITIVE - profit margins
   category    String
+  stockLevel  Int         @default(0)
+  orderItems  OrderItem[]
+  
+  @@index([category])
 }
 
 model StoreHours {
@@ -25,18 +34,49 @@ model StoreHours {
 }
 
 model Employee {
-  id           Int     @id @default(autoincrement())
-  name         String
-  email        String  // SENSITIVE - PII
-  salary       Float   // SENSITIVE - confidential
-  phoneNumber  String  // SENSITIVE - PII
-  position     String
+  id          Int    @id @default(autoincrement())
+  name        String
+  email       String @unique  // SENSITIVE - PII
+  salary      Float           // SENSITIVE - confidential
+  phoneNumber String          // SENSITIVE - PII
+  position    String
 }
 
 model Customer {
-  id           Int     @id @default(autoincrement())
-  name         String  // SENSITIVE - PII
-  email        String  // SENSITIVE - PII
-  phoneNumber  String  // SENSITIVE - PII
-  totalSpent   Float
+  id          Int     @id @default(autoincrement())
+  name        String  // SENSITIVE - PII
+  email       String  @unique  // SENSITIVE - PII
+  phoneNumber String  // SENSITIVE - PII
+  totalSpent  Float   @default(0)
+  orders      Order[]
+  
+  @@index([email])
+}
+
+model Order {
+  id          Int         @id @default(autoincrement())
+  customerId  Int
+  customer    Customer    @relation(fields: [customerId], references: [id])
+  orderDate   DateTime    @default(now())
+  totalAmount Float
+  status      OrderStatus @default(PENDING)
+  orderItems  OrderItem[]
+}
+
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  orderId   Int
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float   // Price at time of order
+}
+
+model StoreInfo {
+  id          Int    @id @default(autoincrement())
+  key         String @unique  // e.g., "address", "parking", "wifi_password"
+  value       String          // The actual info
+  category    String          // e.g., "location", "amenities", "policies"
+  displayName String          // e.g., "Street Address", "Parking Info"
 }
